@@ -423,3 +423,11 @@ button:focus {
   background-size: cover;
   background-blend-mode: normal;
 }
+
+
+
+
+.highlights
+{
+  background-color: #9cbbb8 !important;
+}

@@ -1,3 +1,5 @@
+
+
 document.addEventListener("DOMContentLoaded", function(event) {
 
     const showNavbar = (toggleId, navId, bodyId, headerId) =>{
@@ -54,3 +56,38 @@ document.addEventListener("DOMContentLoaded", function(event) {
         });
         
         });
+
+
+
+        firebase.auth().onAuthStateChanged((user) => {
+            if (user) {
+              // User is signed in, see docs for a list of available properties
+              // https://firebase.google.com/docs/reference/js/firebase.User
+              var uid = user.uid;
+              // ...
+            } else {
+              // User is signed out
+              // ...
+            }
+          });
+
+
+function login()
+{
+    var userEmail = document.getElementById("floatingInput").value;
+    var userPass = document.getElementById("floatingPassword").value;
+    
+    
+    firebase.auth().signInWithEmailAndPassword(userEmail, userPass)
+  .then((userCredential) => {
+    // Signed in
+    var user = userCredential.user;
+    // ...
+  })
+  .catch((error) => {
+    var errorCode = error.code;
+    var errorMessage = error.message;
+  });
+   
+}
+
