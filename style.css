@@ -339,7 +339,7 @@ body {
   display: block;
   position: fixed;
   bottom: 75px;
-  right: 25px;
+  right: 55px;
   z-index: 99;
   font-size: 18px;
   border: none;
@@ -430,4 +430,10 @@ button:focus {
 .highlights
 {
   background-color: #9cbbb8 !important;
+}
+
+.btn-sub
+{
+    background-color: #2ec4b6 !important;
+   
 }
